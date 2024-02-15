@@ -4,8 +4,6 @@ import pyautogui as pg
 my_width = pg.size().width
 my_height = pg.size().height
 
-print(my_width, my_height)
-
 window = CTk(fg_color="black")
 window.title("Calculadora de IMC")
 window.geometry(f'{my_width}x{my_height}')
@@ -83,8 +81,6 @@ def calcular_imc():
             result_label.configure(
                 text_color="red", text=f"Seu IMC é {imc:.2f} - Obesidade nivel 3! Consulte um médico imediatamente!")
             result_label.pack()
-        # result_label.configure(text=f"Seu IMC é {imc:.2f}")
-        # result_label.pack()
 
     except ValueError:
         result_label.configure(
